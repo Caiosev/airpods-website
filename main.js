@@ -32,7 +32,7 @@ gsap.from('.home__scroll', {opacity: 0, duration: 1.5, delay: 2.3, y: 30})
 
 
 var animate = new TimelineMax({onUpdate:updatePercentage})
-var  controller = new ScrollMagic.Controller()
+var controller = new ScrollMagic.Controller()
 
 animate
 .from('.details__img', {opacity: 0, y: 25})
@@ -47,4 +47,20 @@ var scene = new ScrollMagic.Scene({
 
 function updatePercentage(){
     animate.progress()
+}
+
+
+var animate1 = new TimelineMax({onUpdate:updatePercentage1})
+var controller1 = new ScrollMagic.Controller()
+
+animate1
+.from('.comentario', {opacity: 0, x: 25, duration: 1, ease:'expo.out', stagger: .4})
+var scene2 = new ScrollMagic.Scene({
+    triggerElement: ".comentario",
+})
+.setTween(animate1)
+.addTo(controller1)
+
+function updatePercentage1(){
+    animate1.progress()
 }
