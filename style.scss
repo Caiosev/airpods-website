@@ -410,6 +410,16 @@ html{
     width: 100vw;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    h3{
+        text-decoration: line-through;
+        color: red;
+    }
+    h2{
+        font-size: 2rem;
+    }
 }
 
 .div__btn{
